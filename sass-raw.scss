@@ -1,0 +1,53 @@
+$local-white : #FAFAFA;
+$local-gray : #DADAFA;
+$responsive-break : 40em;
+
+body {
+	background-color: $local-white;
+	margin: 0;
+}
+
+$title-height-of-common-box-props : 1.2em;
+$border-width-of-common-box-props : 0px;
+$margin-of-common-box-props : 0.5em;
+
+common-box-props {
+	
+	
+	
+	display: inline-block;
+	border: $border-width-of-common-box-props solid black;
+	width: calc( 50% - 2*#{$border-width-of-common-box-props} - 2*#{$margin-of-common-box-props} );
+	height: calc( 80vh - 2*#{$border-width-of-common-box-props} - 2*#{$margin-of-common-box-props} );
+	margin:$margin-of-common-box-props;
+	@media (max-width: 40em) {
+		width: calc( 100% -  2*#{$border-width-of-common-box-props} - 2*#{$margin-of-common-box-props} );
+	}
+	h1 {
+		text-align: center;
+		margin: 0;
+		height: $title-height-of-common-box-props;
+	}
+	
+	
+}
+
+.raw-markdown-box {
+	@extend common-box-props;
+	float: left;
+	background-color: $local-gray;
+	textarea {
+		width: 100%;
+		height: calc( 100% - 2.25 * #{$title-height-of-common-box-props} - 2*#{$border-width-of-common-box-props} - 2*#{$margin-of-common-box-props} );
+		resize: vertical;
+		
+		-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+	}
+}
+
+.markdown-preview-box {
+float: right;
+	@extend common-box-props;
+}

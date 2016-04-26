@@ -1,0 +1,33 @@
+body {
+  background-color: #FAFAFA;
+  margin: 0; }
+
+common-box-props, .raw-markdown-box, .markdown-preview-box {
+  display: inline-block;
+  border: 0px solid black;
+  width: calc( 50% - 2*0px - 2*0.5em );
+  height: calc( 80vh - 2*0px - 2*0.5em );
+  margin: 0.5em; }
+  @media (max-width: 40em) {
+    common-box-props, .raw-markdown-box, .markdown-preview-box {
+      width: calc( 100% -  2*0px - 2*0.5em ); } }
+  common-box-props h1, .raw-markdown-box h1, .markdown-preview-box h1 {
+    text-align: center;
+    margin: 0;
+    height: 1.2em; }
+
+.raw-markdown-box {
+  float: left;
+  background-color: #DADAFA; }
+  .raw-markdown-box textarea {
+    width: 100%;
+    height: calc( 100% - 2.25 * 1.2em - 2*0px - 2*0.5em );
+    resize: vertical;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.markdown-preview-box {
+  float: right; }
+
+/*# sourceMappingURL=sass-preprocessed.css.map */

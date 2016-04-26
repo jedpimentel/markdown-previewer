@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Markdown Previewer</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="sass-preprocessed.css" />
 		<!-- TAKEN DIRECTLY FROM TUTORIAL https://facebook.github.io/react/docs/tutorial.html -->
 		<!-- I don't plan on using jQuery, but copied it along all other scripts, for debugging -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.0/react.js"></script>
@@ -12,10 +12,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
 		
-		<!-- run through Babel -->
-		<script type="text/babel" src="script.js"></script>
+		
 	</head>
 	<body>
 		<div id="markdown-previewer"></div>
+		<!-- run through Babel -->
+		<script type="text/babel" src="jsx.js"></script>
 	</body>
 </html>
